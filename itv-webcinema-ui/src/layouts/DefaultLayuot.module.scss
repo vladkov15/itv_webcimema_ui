@@ -1,0 +1,19 @@
+.Main {
+  display: inline-block;
+
+  &__Left {
+    position: fixed;
+    width: 10%;
+    height: 100%;
+    overflow: auto;
+    margin-left: 50px;
+  }
+  &__Right {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 85%;
+    height: 100%;
+    overflow: auto;
+  }
+}

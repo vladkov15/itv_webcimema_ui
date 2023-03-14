@@ -1,6 +1,7 @@
 import ButtonGroup from "@ui/components/button/ButtonGroup";
 import { ToggleButton } from "@ui/index";
 import { useState } from "react";
+import CodeEditor from "src/modules/CodeEditor";
 
 function ToggleButtonExample() {
     const [checked, setChecked] = useState(false);
@@ -76,4 +77,57 @@ function ToggleButtonExample() {
     );
   }
 
-  export default ToggleButtonExample;
+  function ToggleButtonExampleCode(){
+    return(
+      <CodeEditor text={`import ButtonGroup from "@ui/components/button/ButtonGroup";
+      import { ToggleButton } from "@ui/index";
+      import { useState } from "react";\n
+      \n
+      function ToggleButtonExample() {
+        const [checked, setChecked] = useState(false);
+        const [radioValue, setRadioValue] = useState('1');
+      
+        const radios = [
+          { name: 'Active', value: '1' },
+          { name: 'Radio', value: '2' },
+          { name: 'Radio', value: '3' },
+        ];
+      
+        return (
+          <>
+            <ButtonGroup >
+              <ToggleButton
+                id="toggle-check"
+                type="checkbox"
+                variant="secondary"
+                checked={checked}
+                value="1"
+                onChange={(e) => setChecked(e.currentTarget.checked)}
+              >
+                Checked
+              </ToggleButton>
+            </ButtonGroup>
+            <br />
+            <ButtonGroup >
+          {radios.map((radio, idx) => (
+            <ToggleButton
+              key={idx}'
+              ////id=
+              type="radio"
+              variant={idx % 2 ? 'outline-success' : 'outline-danger'}
+              name="radio"
+              value={radio.value}
+              checked={radioValue === radio.value}
+              onChange
+              >
+              {radio.name}
+            </ToggleButton>
+          ))}
+        </ButtonGroup>
+      </>
+    );
+  }`} />
+    )
+  }
+
+  export default {ToggleButtonExample,ToggleButtonExampleCode}

@@ -1,9 +1,9 @@
 import DefaultLayout from "src/layouts/DefaultLayout";
 import styles from "../../style/GeneralStyles.module.scss";
 import BasicExamples from "./examples/BasicExample";
-import ButtonExample from "./examples/ButtonExample";
-import PillExample from "./examples/PillExample";
-import VariationsExample from "./examples/VariationsExample";
+import ButtonExamples from "./examples/ButtonExample";
+import PillExamples from "./examples/PillExample";
+import VariationsExamples from "./examples/VariationsExample";
 import BadgeAPI from "./tables/BadgeAPI";
 
 const BadgePage = () => {
@@ -24,11 +24,17 @@ const BadgePage = () => {
           <div className={styles.Example}>
             <BasicExamples.BasicExample />
           </div>
+          <div className={styles.Example}>
+            <BasicExamples.BasicExampleCode />
+          </div>
           <p>
             Badges can be used as part of links or buttons to provide a counter.
           </p>
           <div className={styles.Example}>
-            <ButtonExample />
+            <ButtonExamples.ButtonExample />
+          </div>
+          <div className={styles.Example}>
+            <ButtonExamples.ButtonExampleCode />
           </div>
           <p>
             Note that depending on how they are used, badges may be confusing
@@ -47,7 +53,10 @@ const BadgePage = () => {
             appearance of a badge.
           </p>
           <div className={styles.Example}>
-            <VariationsExample />
+            <VariationsExamples.VariationsExample />
+          </div>
+          <div className={styles.Example}>
+            <VariationsExamples.VariationsExampleCode />
           </div>
           <h2>Pill</h2>
           <p>
@@ -55,7 +64,10 @@ const BadgePage = () => {
             a larger border-radius). Useful if you miss the badges from v3.
           </p>
           <div className={styles.Example}>
-                <PillExample />
+            <PillExamples.PillExample />
+          </div>
+          <div className={styles.Example}>
+            <PillExamples.PillExampleCode />
           </div>
           <h1>API</h1>
           <BadgeAPI />
